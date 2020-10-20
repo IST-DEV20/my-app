@@ -35,7 +35,13 @@ import { StatusBar } from "expo-status-bar";
 //import MyReanimate from "./src/components/MyReanimated";
 //import MySharing from './src/components/MySharing';
 //import MySharingWeb from './src/components/MySharingWeb';
-import MySlide from './src/components/MySlider';
+//import MySlide from './src/components/MySlider';
+//import MyWinDim from './src/components/MyWindowDim';
+import MyStatusBar from './src/components/MyStatusBar';
+import MyBackHandle from './src/components/MyBackHandle';
+import MyLaouts from './src/components/MyLaouts';
+
+
 
 
 import { enableScreens } from 'react-native-screens';
@@ -55,8 +61,9 @@ export default function App() {
           flex: 1,
         }}
       >
-        <MySlide />
-        <StatusBar hidden={true} />
+        <MyLaouts/>
+        <MyBackHandle/>
+        <MyStatusBar />
       </View>
 
   );
