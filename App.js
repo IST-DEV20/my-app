@@ -1,5 +1,8 @@
 import React, { useEffect } from "react";
-import { View } from "react-native";
+import { View, Text, Button } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
 //import { StatusBar } from "expo-status-bar";
 // import {
 //   SafeAreaView,
@@ -38,8 +41,12 @@ import { View } from "react-native";
 //import MyStatusBar from "./src/components/MyStatusBar";
 //import MyBackHandle from './src/components/MyBackHandle';
 //import MyLaouts from './src/components/MyLaouts';
-import MyVideo from "./src/components/MyVideo";
-//import MyModalFull from './src/components/MyModalFull'; // NOT WORK
+//import MyVideo from "./src/components/MyVideo";
+//import MyModalFull from './src/components/MyModalFull'; 
+//import MyJoyStick from './src/components/MyJoystick';// NOT WORK
+//import MyGamePad from './src/components/MyGamePad';// NOT WORK
+//import MyNavEx01 from './src/components/MyNavEx01'; // 
+//import MyHeaderBtn from './src/components/MyHeaderButton';
 
 
 import { enableScreens } from "react-native-screens";
@@ -48,28 +55,70 @@ enableScreens();
 import * as ScreenOrientation from "expo-screen-orientation";
 ScreenOrientation.unlockAsync();
 
-export default function App() {
-  //   const example = async () => {
-  //     try{
-  //       if (Platform.OS == 'android') {
-  //         const response = await changeNavigationBarColor('#ffffff');
-  //         console.log(response)// {success: true}
-  //         }
-  //     }catch(e){
-  //         console.log(e)// {success: false}
-  //     }
-  // };
-  //   useEffect(() => {
-  //     example();
-  //   }, [example]);
 
-  return (
-    <View
-      style={{
-        flex: 1,
-      }}
-    >
-      <MyVideo />
-    </View>
-  );
-}
+// function HomeScreen({ navigation }) {
+//   return (
+//     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+//       <Text style={{ fontSize: 30 }}>This is the home screen!</Text>
+//       <Button
+//         onPress={() => navigation.navigate('MyModal')}
+//         title="Open Modal"
+//       />
+//     </View>
+//   );
+// }
+
+// function ModalScreen({ navigation }) {
+//   return (
+//     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+//       <Text style={{ fontSize: 30 }}>This is a modal!</Text>
+//       <Button onPress={() => navigation.goBack()} title="Dismiss" />
+//     </View>
+//   );
+// }
+
+// function DetailsScreen() {
+//   return (
+//     <View>
+//       <Text>Details</Text>
+//     </View>
+//   );
+// }
+
+
+
+// const MainStack = createStackNavigator();
+// const RootStack = createStackNavigator();
+
+// function MainStackScreen() {
+//   return (
+//     <MainStack.Navigator>
+//       <MainStack.Screen name="Home" component={HomeScreen} />
+//       <MainStack.Screen name="Details" component={DetailsScreen} />
+//     </MainStack.Navigator>
+//   );
+// }
+
+// function App() {
+//   return (
+//     <NavigationContainer>
+//       <RootStack.Navigator mode="modal" headerMode="none">
+//         <RootStack.Screen name="Main" component={MainStackScreen} />
+//         <RootStack.Screen name="MyModal" component={ModalScreen} />
+//       </RootStack.Navigator>
+//     </NavigationContainer>
+//   );
+// }
+
+
+
+//import App from './src/components/MyTabNav';
+//import App from './src/components/MyDrawer';
+//import App from './src/components/MyHiddenTabBar';
+//import App from './src/components/MyHiddingTabScreen';
+//import App from './src/components/MyUseNavEx';
+//import App from './src/components/MyOperatingTheme';
+//import App from './src/components/MyRedux';
+import App from './src/components/MyLocalize';
+
+export default App;
