@@ -1,8 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { View } from "react-native";
-import { StatusBar } from "expo-status-bar";
-
-
+//import { StatusBar } from "expo-status-bar";
 // import {
 //   SafeAreaView,
 //   useSafeAreaInsets,
@@ -37,34 +35,41 @@ import { StatusBar } from "expo-status-bar";
 //import MySharingWeb from './src/components/MySharingWeb';
 //import MySlide from './src/components/MySlider';
 //import MyWinDim from './src/components/MyWindowDim';
-import MyStatusBar from './src/components/MyStatusBar';
-import MyBackHandle from './src/components/MyBackHandle';
-import MyLaouts from './src/components/MyLaouts';
+//import MyStatusBar from "./src/components/MyStatusBar";
+//import MyBackHandle from './src/components/MyBackHandle';
+//import MyLaouts from './src/components/MyLaouts';
+import MyVideo from "./src/components/MyVideo";
+//import MyModalFull from './src/components/MyModalFull'; // NOT WORK
 
 
-
-
-import { enableScreens } from 'react-native-screens';
+import { enableScreens } from "react-native-screens";
 enableScreens();
 
 import * as ScreenOrientation from "expo-screen-orientation";
 ScreenOrientation.unlockAsync();
 
-
 export default function App() {
-   
+  //   const example = async () => {
+  //     try{
+  //       if (Platform.OS == 'android') {
+  //         const response = await changeNavigationBarColor('#ffffff');
+  //         console.log(response)// {success: true}
+  //         }
+  //     }catch(e){
+  //         console.log(e)// {success: false}
+  //     }
+  // };
+  //   useEffect(() => {
+  //     example();
+  //   }, [example]);
 
   return (
-
-      <View
-        style={{
-          flex: 1,
-        }}
-      >
-        <MyLaouts/>
-        <MyBackHandle/>
-        <MyStatusBar />
-      </View>
-
+    <View
+      style={{
+        flex: 1,
+      }}
+    >
+      <MyVideo />
+    </View>
   );
 }

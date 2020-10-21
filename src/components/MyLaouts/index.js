@@ -37,22 +37,22 @@ const App = () => {
     setterFunction(value + 1);
   };
 
-  const Square = () => {
+  const Square = (id) => {
     const sqStyle = {
       width: 50,
       height: 50,
       backgroundColor: randomHexColor(),
     };
-    return <View style={sqStyle} />;
+    return <View key={id} style={sqStyle} />;
   };
 
-  const [squares, setSquares] = useState([Square(), Square(), Square()]);
+  const [squares, setSquares] = useState([Square(0), Square(1), Square(2)]);
 
   return (
     <>
       <View style={{ paddingTop: Constants.statusBarHeight }} />
       <View style={[styles.container, styles.playingSpace, hookedStyles]}>
-        {squares.map(elem => elem)}
+        {squares.map((elem) => elem)}
       </View>
       <ScrollView style={[styles.container]}>
         <View style={[styles.controlSpace]}>
@@ -89,7 +89,7 @@ const App = () => {
             <Text style={styles.text}>{wraps[wrap]}</Text>
           </View>
           <View style={styles.buttonView}>
-            <Button title="Add Square" onPress={() => setSquares([...squares, Square()])} />
+            <Button title="Add Square" onPress={() => setSquares([...squares, Square(squares.length)])} />
           </View>
           <View style={styles.buttonView}>
             <Button
